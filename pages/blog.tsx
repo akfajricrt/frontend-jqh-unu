@@ -1,26 +1,16 @@
-import type { NextPage } from "next";
-import { useEffect } from "react";
-import AOS from "aos";
-import Navbar from "../components/organisms/Navbar";
-import MainBanner from "../components/organisms/MainBanner";
-import PilihanDivisi from "../components/organisms/PilihanDivisi";
-import FeaturedGallery from "../components/organisms/FeaturedGallery";
-import Story from "../components/organisms/Story";
-import Reached from "../components/organisms/Reached";
+import FeaturedBlog from "../components/organisms/FeaturedBlog";
 import Footer from "../components/organisms/Footer";
+import Navbar from "../components/organisms/Navbar";
 import Head from "next/head";
 
-const Home: NextPage = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+export default function Blog() {
   return (
     <>
       <Head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>JQH IAC UNU Yogyakarta</title>
+        <title>Blog & Artikel | JQH IAC UNU Yogyakarta</title>
 
         <meta
           name="description"
@@ -46,14 +36,27 @@ const Home: NextPage = () => {
         <link rel="shortcut icon" href="/icon/logo.ico" type="image/x-icon" />
       </Head>
       <Navbar />
-      <MainBanner />
-      <PilihanDivisi />
-      <FeaturedGallery />
-      <Story />
-      <Reached />
+      <section className="detail pt-lg-60 pb-50">
+        <div className="container-xxl container-fluid">
+          <h2 className="text-4xl fw-bold color-palette-1 text-start mb-30 mt-3">
+            Blog & Artikel
+          </h2>
+
+          <div className="d-flex mt-4 mb-5">
+            <a href="/#" className="btn btn-success active">
+              All
+            </a>
+            <a href="/#" className="btn">
+              Event
+            </a>
+            <a href="/#" className="btn">
+              News
+            </a>
+          </div>
+        </div>
+        <FeaturedBlog />
+      </section>
       <Footer />
     </>
   );
-};
-
-export default Home;
+}

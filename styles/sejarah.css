@@ -1,0 +1,22 @@
+/* Details */
+
+.sejarah .paragraf {
+  width: 868px;
+  color: #5c5c5c;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.gambar-sejarah {
+  border-radius: 20px;
+  width: 1084px;
+  height: 480px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+@media (max-width: 500px) {
+  .gambar-sejarah {
+    max-width: 100%;
+  }
+}
